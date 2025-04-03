@@ -1,0 +1,19 @@
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+    "http://struts.apache.org/dtds/struts-2.5.dtd">
+<struts>
+    <package name="default" extends="struts-default">
+        <action name="register" class="com.example.action.UserAction" method="saveUserDetails">
+            <result name="success">success.jsp</result>
+            <result name="error">register.jsp</result>
+        </action>
+        <action name="login" class="com.example.action.UserAction" method="userLogin">
+            <result name="loginsuccess">loginSuccess.jsp</result>
+            <result name="error">error.jsp</result>
+        </action>
+            <action name="user" class="com.example.action.UserAction" method="getUserDetails">
+            <result name="data">userdata.jsp</result>
+            <result name="error">error.jsp</result>
+        </action>
+        
+    </package>
+</struts>
